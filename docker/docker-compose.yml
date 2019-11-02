@@ -31,5 +31,23 @@ services:
                 ports:
                         - "8080:8080"
                 container_name: bbs_server
+                depends_on:
+                        - redis
+                        - db
+        proxy:
+                image: nginx
+                volumes: 
+                    - $PWD/conf:/etc/nginx/conf.d
+                container_name: proxy
+                expose: 
+                    - "80"
+                ports: 
+                    - "80:80"
+                depends_on:
+                        - web
+        
+                
+                    
+                
                 
 
