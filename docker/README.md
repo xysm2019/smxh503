@@ -12,7 +12,7 @@
 
   bbs_web_server hostname：bbs_server port:8080
 
-  暂未配置Nginx反向代理服务
+  Nginx反向代 hostname：proxy port：80
 
 ## 域名规划：
 
